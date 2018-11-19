@@ -24,6 +24,9 @@ Resources:
       - arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess
       - arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess
       - arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess
+      - arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess
+      - arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess
+      - arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess
       Policies:
       - PolicyName: DescribeTags
         PolicyDocument:
@@ -38,6 +41,8 @@ Resources:
             - "redshift:DescribeTags"
             - "lambda:ListTags"
             - "sqs:ListQueueTags"
+            - "apigateway:GET"
+            - "apigateway:OPTIONS"
             Resource: "*"
 
 Outputs:
